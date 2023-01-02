@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Player Search</title>
+  </head>
+  <body>
+    <h1>Kansas City Royals Player Search System</h1>
+        <p>Author: Zach Borromeo</p>
+        <div class="search-container">
+          <label for="search" style="font-size: 24px; font-weight: bold; color:#004687;">Player Search:</label>
+          <input type="text" class="search-bar" placeholder="Find Player" id="input">
+          <button type="input" class="button" id="submit" title="Find Player and Display Stats">Find Player</button>
+          <button type="input" class="button" id="submit_reports" title="Find Player and Display Stats">Find Player Reports</button>
+          <button type="input" class="button" id="reset" title="Clear Search">Clear Search</button>
+        </div>
+        <div class="search-container">
+          <p>Search Filters: 
+            <button type="input" class="button" id="filter" title="Filter Players Based on Criteria">Filter Position/Team</button>
+            <button type="input" class="button" id="filter_reports" title="Filter Players Based on Criteria">Filter Position/Team + Reports</button>
+            <button type="input" class="button" id="clear_team_filter" title="Clear Position/Team Filters">Clear Position/Team Filters</button>
+          </p>  
+          <h2>Position:
+              <select id ="position-filter">
+                <option value="EMPTY">Select Position</option>
+                <option value="DH">Designated Hitter</option>
+                <option value="1B">First Baseman</option>
+                <option value="2B">Second Baseman</option>
+                <option value="3B">Third Baseman</option>
+                <option value="SS">Shortstop</option>
+                <option value="C">Catcher</option>
+                <option value="LF">Left Fielder</option>
+                <option value="RF">Right Fielder</option>
+                <option value="CF">Center Fielder</option>
+                <option value="RHS">Right Handed Starter</option>
+                <option value="LHS">Left Handed Starter</option>
+                <option value="RHR">Right Handed Reliever</option>
+                <option value="LHR">Left Handed Reliever</option>
+              </select>
+            </h2>
+            <h2>Team: 
+              <select id="team-filter">
+                <option value="EMPTY">Select Team</option>
+                <option value="ARI">Arizona Diamondbacks</option>
+                <option value="ATL">Atlanta Braves</option>
+                <option value="BAL">Baltimore Orioles</option>
+                <option value="BOS">Boston Red Sox</option>
+                <option value="CWS">Chicago White Sox</option>
+                <option value="CHI">Chicago Cubs</option>
+                <option value="CIN">Cincinnati Reds</option>
+                <option value="CLE">Cleveland Guardians</option>
+                <option value="COL">Colorado Rockies</option>
+                <option value="DET">Detroit Tigers</option>
+                <option value="HOU">Houston Astros</option>
+                <option value="KC">Kansas City Royals</option>
+                <option value="LAA">Los Angeles Angels</option>
+                <option value="LA">Los Angeles Dodgers</option>
+                <option value="MIA">Miami Marlins</option>
+                <option value="MIL">Milwaukee Brewers</option>
+                <option value="MIN">Minnesota Twins</option>
+                <option value="NYY">New York Yankees</option>
+                <option value="NY">New York Mets</option>
+                <option value="OAK">Oakland Athletics</option>
+                <option value="PHI">Philadelphia Phillies</option>
+                <option value="PIT">Pittsburgh Pirates</option>
+                <option value="SD">San Diego Padres</option>
+                <option value="SF">San Francisco Giants</option>
+                <option value="SEA">Seattle Mariners</option>
+                <option value="STL">St. Louis Cardinals</option>
+                <option value="TB">Tampa Bay Rays</option>
+                <option value="TEX">Texas Rangers</option>
+                <option value="TOR">Toronto Blue Jays</option>
+                <option value="WSH">Washington Nationals</option>
+              </select>
+            </h2>
+            </div>
+            <div class="search-container">
+              <p>Player Statistics Filters: 
+                <button type="input" class="button" id="stats_filter" title="Filter Players Based on Statistics">Filter Players</button>
+                <button type="input" class="button" id="clear_filter" title="Clear Statistics Filters">Clear Filters</button>
+              </p>  
+              <h2>Position:
+                  <select id ="hp_filter">
+                    <option value="EMPTY">Select Position</option>
+                    <option value="hitting_stats">Hitters</option>
+                    <option value="pitching_stats">Pitchers</option>
+                  </select>
+              </h2>
+              <h2>Statistic 1:
+                <select id ="stat_filter_one">
+                  <option value="EMPTY">Select Statistic</option>
+                  <option value="avg">Batting Average</option>          
+                  <option value="ops">OPS</option>
+                  <option value="slugging">Slugging</option>
+                  <option value="hits">Hits</option>
+                  <option value="bases_on_balls">Walks</option>
+                  <option value="innings_pitched">Innings Pitched</option>
+                  <option value="era">ERA</option>
+                </select>
+                <input type="radio" id="stat_one_GTET">
+                <label for="stat_one_GTET">>=</label>
+                <input type="radio" id="stat_one_LTET">
+                <label for="stat_one_LTET"><=</label>
+                <input type="number" class="filter-bar" placeholder="1.000" id="stat_one_val">
+              </h2>
+              <h2>Statistic 2:
+                <select id ="stat_filter_two">
+                  <option value="EMPTY">Select Statistic</option>
+                  <option value="avg">Batting Average</option>          
+                  <option value="ops">OPS</option>
+                  <option value="slugging">Slugging</option>
+                  <option value="hits">Hits</option>
+                  <option value="bases_on_balls">Walks</option>
+                  <option value="innings_pitched">Innings Pitched</option>
+                  <option value="era">ERA</option>
+                </select>
+                <input type="radio" id="stat_two_GTET">
+                <label for="stat_two_GTET">>=</label>
+                <input type="radio" id="stat_two_LTET">
+                <label for="stat_two_LTET"><=</label>
+                <input type="number" class="filter-bar" placeholder="1.000" id="stat_two_val">
+              </h2>
+              <h2>Statistic 3:
+                <select id ="stat_filter_three">
+                  <option value="EMPTY">Select Statistic</option>
+                  <option value="avg">Batting Average</option>          
+                  <option value="ops">OPS</option>
+                  <option value="slugging">Slugging</option>
+                  <option value="hits">Hits</option>
+                  <option value="bases_on_balls">Walks</option>
+                  <option value="innings_pitched">Innings Pitched</option>
+                  <option value="era">ERA</option>
+                </select>
+                <input type="radio" id="stat_three_GTET">
+                <label for="stat_three_GTET">>=</label>
+                <input type="radio" id="stat_three_LTET">
+                <label for="stat_three_LTET"><=</label>
+                <input type="number" class="filter-bar" placeholder="1.000" id="stat_three_val">
+              </h2>
+              </h2>
+              </div>
+        <p style="margin: 10px">
+    <div class="player-container" id="player-container"></div>
+    <div class="player-stats-container" id="player-stats-container"></div>
+    <div class="player-reports-container" id="player-reports-container"></div>
+    <script src="players/players.json"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

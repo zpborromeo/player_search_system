@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #7BB2DD;
+    background: linear-gradient(to right, #efefbb, #d4d4aa);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+}
+
+h1{
+  letter-spacing: 3px;
+  color: #004687; 
+  font-weight: bold; 
+  font-size: 48px;
+}
+
+h2{
+  color: #004687; 
+  font-weight: bold; 
+  font-size: 16px;
+}
+
+h4{
+  font-size: 13px;
+  letter-spacing: 0.25px;
+  align-items: center;
+}
+
+p{
+  color: #004687; 
+  font-weight: bold; 
+  font-size: 24px;
+  text-align: center;
+}
+
+pre{
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+}
+
+.player-img-card-container{
+  vertical-align: top;
+  text-align: center;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.search-container{
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  color: #004687;
+  font-weight: bold;
+}
+
+.search-bar{
+  width: 200px;
+  height: 40px;
+  border-radius: 12px;
+  border-color: #004687;
+}
+
+.filter-bar{
+  width: 60px;
+  height: 25px;
+  border-radius: 6px;
+  border-color: #004687;
+}
+
+.button{
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  border-color: #004687;
+  color: #004687;
+  background-color: #FFFFFF;
+}
+
+.button:hover, button:focus{
+  background-color: #7bb2dd;
+  color: #FFFFFF;
+}
+
+.button-card{
+  text-align: center;
+  padding: 10px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 12px;
+  border-color: #004687;
+  color: #004687;
+  background-color: #FFFFFF;
+}
+
+.button-card:hover, button:focus{
+  background-color: #7bb2dd;
+  color: #FFFFFF;
+}
+
+.player-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+}
+
+.player{
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(100,100,100,0.2);
+  padding: 10px;
+  text-align: center;
+}
+
+.player .img-container{
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+  width: 120px;
+  height: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.player .image img{
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.player .info{
+  margin-top: 10px;
+}
+
+.player .info .number{
+  background-color: rgba(0,0,0,0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.player .info .name{
+ margin: 15px 0 7px;
+ letter-spacing: 1px;
+}
+
+/* Player Stats Containers */
+
+.playerstats-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+}
+
+.playerstats{
+background-color: #eee;
+border-radius: 10px;
+box-shadow: 0 3px 15px rgba(100,100,100,0.2);
+padding: 10px;
+text-align: center;
+}
+
+.playerstats .img-container{
+background-color: rgba(255,255,255,0.5);
+border-radius: 5px;
+width: 120px;
+height: 160px;
+text-align: center;
+vertical-align: middle;
+}
+
+.playerstats .image img{
+max-width: 90%;
+margin-top: 20px;
+vertical-align: middle;
+}
+
+.playerstats .info{
+margin-top: 10px;
+text-align: left;
+vertical-align: middle;
+}
+
+.playerstats .info .number{
+background-color: rgba(0,0,0,0.1);
+padding: 5px 10px;
+border-radius: 5px;
+font-size: 1.2rem;
+}
+
+.playerstats .info .name{
+margin: 15px 0 7px;
+letter-spacing: 1px;
+}
+
+.playerstats .statistics{
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* Player Reports Container */
+
+.playerreports-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+}
+
+.playerreports{
+background-color: #eee;
+border-radius: 10px;
+box-shadow: 0 3px 15px rgba(100,100,100,0.2);
+padding: 10px;
+text-align: center;
+}
+
+.playerreports .img-container{
+background-color: rgba(255,255,255,0.5);
+border-radius: 5px;
+width: 120px;
+height: 160px;
+text-align: center;
+vertical-align: middle;
+}
+
+.playerreports .image img{
+max-width: 90%;
+margin-top: 20px;
+vertical-align: middle;
+}
+
+.playerreports .info{
+margin-top: 10px;
+text-align: left;
+vertical-align: middle;
+}
+
+.playerreports .info .number{
+background-color: rgba(0,0,0,0.1);
+padding: 5px 10px;
+border-radius: 5px;
+font-size: 1.2rem;
+}
+
+.playerreports .info .name{
+margin: 15px 0 7px;
+letter-spacing: 1px;
+}
+
+.playerreports .reports{
+  align-items: center;
+  vertical-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
